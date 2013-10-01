@@ -20,7 +20,7 @@ namespace InternetExplorerUrlKiller
             while (true)
             {
                 var shellWindows = new ShellWindows();
-                foreach (var ieInst in from InternetExplorer ieInst in shellWindows let url = ieInst.LocationURL where url.Contains("OmbudsMessage") select ieInst)
+                foreach (var ieInst in from InternetExplorer ieInst in shellWindows let url = ieInst.LocationURL where url.Contains("Ombuds") select ieInst)
                 {
                     ieInst.Quit();
                 }
